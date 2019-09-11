@@ -1,0 +1,12 @@
+(SELECT DISTINCT JuzID,Sura.Name,Ayah.SuraID,Ayah.AyahID,Ayah.AyahText
+FROM Juz , Sura,Ayah
+WHERE Juz.JuzID=1 AND Juz.SuraID=Ayah.SuraID AND Juz.SuraID=Sura.SuraID  AND Ayah.AyahID>=Juz.AyahID
+ORDER BY Ayah.AyahID)
+UNION ALL
+(
+  SELECT DISTINCT JuzID,Sura.Name,Ayah.SuraID,Ayah.AyahID,Ayah.AyahText
+FROM Juz , Sura,Ayah
+WHERE Juz.JuzID=1+1 AND Juz.SuraID=Ayah.SuraID AND Juz.SuraID=Sura.SuraID  AND Ayah.AyahID<Juz.AyahID
+ORDER BY Ayah.AyahID
+
+);

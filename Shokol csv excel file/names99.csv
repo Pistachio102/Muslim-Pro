@@ -1,0 +1,100 @@
+nameID,arabic,transliteration,meaning
+1,الرَّحْمَنُ,Ar Rahmaan,The Beneficent
+2,الرَّحِيمُ,Ar Raheem,The Merciful
+3,الْمَلِكُ,Al Malik,The King / Eternal Lord
+4,الْقُدُّوسُ,Al Quddus,The Purest
+5,السَّلاَمُ,As Salaam,The Source of Peace
+6,الْمُؤْمِنُ,Al Mu'min,The inspirer of faith
+7,الْمُهَيْمِنُ,Al Muhaymin,The Guardian
+8,الْعَزِيزُ,Al Azeez,The Precious / The Most Mighty
+9,الْجَبَّارُ,Al Jabbaar,The Compeller
+10,الْمُتَكَبِّرُ,Al Mutakabbir,The Greatest
+11,الْخَالِقُ,Al Khaaliq,The Creator
+12,الْبَارِئُ,Al Baari,The Maker of Order
+13,الْمُصَوِّرُ,Al Musawwir,The Shaper of Beauty
+14,الْغَفَّارُ,Al Ghaffaar,The Forgiving
+15,الْقَهَّارُ,Al Qahhaar,The Subduer
+16,الْوَهَّابُ,Al Wahhaab,The Giver of All
+17,الرَّزَّاقُ,Ar Razzaaq,The Sustainer
+18,الْفَتَّاحُ,Al Fattaah,The Opener
+19,اَلْعَلِيْمُ,Al 'Aleem,The Knower of all
+20,الْقَابِضُ,Al Qaabid,The Constrictor
+21,الْبَاسِطُ,Al Baasit,The Reliever
+22,الْخَافِضُ,Al Khaafid,The Abaser
+23,الرَّافِعُ,Ar Raafi',The Exalter
+24,الْمُعِزُّ,Al Mu'iz,The Bestower of Honour
+25,المُذِلُّ,Al Mudhil,The Humiliator
+26,السَّمِيعُ,As Samee',The Hearer of all
+27,الْبَصِيرُ,Al Baseer,The Seer of all
+28,الْحَكَمُ,Al Hakam,The Judge
+29,الْعَدْلُ,Al 'Adl,The Just
+30,اللَّطِيفُ,Al Lateef,The Subtle One
+31,الْخَبِيرُ,Al Khabeer,The All Aware
+32,الْحَلِيمُ,Al Haleem,The Forebearing
+33,الْعَظِيمُ,Al 'Azeem,The Maginificent
+34,الْغَفُورُ,Al Ghafoor,The Great Forgiver
+35,الشَّكُورُ,Ash Shakoor,The Rewarder of Thankfulness
+36,الْعَلِيُّ,Al 'Aliyy,The Highest
+37,الْكَبِيرُ,Al Kabeer,The Greatest
+38,الْحَفِيظُ,Al Hafeez,The Preserver
+39,المُقيِت,Al Muqeet,The Nourisher
+40,الْحسِيبُ,Al Haseeb,The Reckoner
+41,الْجَلِيلُ,Al Jaleel,The Majestic
+42,الْكَرِيمُ,Al Kareem,The Generous
+43,الرَّقِيبُ,Ar Raqeeb,The Watchful One
+44,الْمُجِيبُ,Al Mujeeb ,The Responder to Prayer
+45,الْوَاسِعُ,Al Waasi',The All Comprehending
+46,الْحَكِيمُ,Al Hakeem,The Perfectly Wise
+47,الْوَدُودُ,Al Wudood,The Loving One
+48,الْمَجِيدُ,Al Majeed,The Most Glorious One
+49,الْبَاعِثُ,Al Baa'ith,The Resurrector
+50,الشَّهِيدُ,Ash Shaheed,The Witness
+51,الْحَقُّ,Al Haqq,The Truth
+52,الْوَكِيلُ,Al Wakeel,The Trustee
+53,الْقَوِيُّ,Al Qawiyy,The Possessor of all strength
+54,الْمَتِينُ,Al Mateen,The Forceful
+55,الْوَلِيُّ,Al Waliyy,The Protector
+56,الْحَمِيدُ,Al Hameed,The Praised
+57,الْمُحْصِي,Al Muhsi,The Appraiser
+58,الْمُبْدِئُ,Al Mubdi,The Originator
+59,الْمُعِيدُ,Al Mu'eed,The Restorer
+60,الْمُحْيِي,Al Muhiy,The Giver of life
+61,اَلْمُمِيتُ,Al Mumeet,The Taker of life
+62,الْحَيُّ,Al Haiyy,The Ever Living
+63,الْقَيُّومُ,Al Qayyoom,The Self Existing
+64,الْوَاجِدُ,Al Waajid,The Finder
+65,الْمَاجِدُ,Al Maajid,The Glorious
+66,الْواحِدُ,Al Waahid,The Only One
+67,اَلاَحَدُ,Al Ahad,The One
+68,الصَّمَدُ,As Samad,The Supreme Provider
+69,الْقَادِرُ,Al Qaadir,The Powerful
+70,الْمُقْتَدِرُ,Al Muqtadir,The Creator of all power
+71,الْمُقَدِّمُ,Al Muqaddim,The Expediter
+72,الْمُؤَخِّرُ,Al Mu’akhir,The Delayer
+73,الأوَّلُ,Al Awwal,The First
+74,الآخِرُ,Al Aakhir,The Last
+75,الظَّاهِرُ,Az Zaahir,The Manifest
+76,الْبَاطِنُ,Al Baatin,The Hidden
+77,الْوَالِي,Al Waali,The Governor
+78,الْمُتَعَالِي,Al Muta’ali,The Supreme One
+79,الْبَرُّ,Al Barr,The Doer of Good
+80,التَّوَابُ,At Tawwaab,The Guide to Repentence
+81,الْمُنْتَقِمُ,Al Muntaqim,The Avenger
+82,العَفُوُّ,Al Afuww,The Forgiver
+83,الرَّؤُوفُ,Ar Ra’oof,The Clement
+84,مَالِكُ الْمُلْكِ,Maalik Ul Mulk,The Owner / Soverign of All
+85,ذُوالْجَلاَلِ وَالإكْرَامِ,Dhu Al Jalaali Wa Al Ikraam,Possessor of Majesty and Bounty
+86,الْمُقْسِطُ,Al Muqsit,The Equitable One
+87,الْجَامِعُ,Al Jaami',The Gatherer
+88,الْغَنِيُّ,Al Ghaniyy,The Rich One
+89,الْمُغْنِي,Al Mughi,The Enricher
+90,اَلْمَانِعُ,Al Maani',The Preventer of harm
+91,الضَّارَّ,Ad Daaarr,The Creator of the harmful
+92,النَّافِعُ,An Naafi’,The Bestower of Benefits
+93,النُّورُ,An Noor,The Light
+94,الْهَادِي,Al Haadi,The Guider
+95,الْبَدِيعُ,Al Badi',The Originator
+96,اَلْبَاقِي,Al Baaqi,The Everlasting One
+97,الْوَارِثُ,Al Waarith,The Inhertior
+98,الرَّشِيدُ,Ar Rasheed,The Most Righteous Guide
+99,الصَّبُورُ,As Saboor,The Patient One

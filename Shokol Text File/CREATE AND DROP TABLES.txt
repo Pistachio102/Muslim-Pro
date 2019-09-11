@@ -1,0 +1,137 @@
+CREATE TABLE NamesOfAllah
+(
+  NameID        INTEGER PRIMARY KEY,
+  Arabic        VARCHAR(100) NOT NULL,
+  Pronunciation VARCHAR(100) NOT NULL,
+  Translation   VARCHAR(100) NOT NULL
+);
+CREATE TABLE WallPaper
+(
+  WallpaperID INTEGER PRIMARY KEY,
+  Arabic      VARCHAR(200) NOT NULL,
+  ImagePath   VARCHAR(200) NOT NULL,
+  Translation VARCHAR(200) NOT NULL
+);
+CREATE TABLE UserTable
+(
+  UserID                      INTEGER PRIMARY KEY,
+  Email                       VARCHAR(100) NOT NULL,
+  Password                    VARCHAR(100) NOT NULL,
+  Name                        VARCHAR(100) NOT NULL,
+  Address                     VARCHAR(200) NOT NULL,
+  SelectedFont                VARCHAR(100) NOT NULL,
+  SelectedTranslationLanguage VARCHAR(100) NOT NULL
+);
+CREATE TABLE Place
+(
+  Longitude FLOAT        NOT NULL,
+  Latitude  FLOAT        NOT NULL,
+  Name      VARCHAR(100) NOT NULL,
+  Type      VARCHAR(100) NOT NULL,
+  PRIMARY KEY (Longitude, Latitude)
+);
+CREATE TABLE UserGoesToPlaces
+(
+  UserId    INTEGER NOT NULL,
+  Longitude FLOAT   NOT NULL,
+  Latitude  FLOAT   NOT NULL,
+  FOREIGN KEY (UserId) REFERENCES UserTable (UserID),
+  FOREIGN KEY (Longitude, Latitude) REFERENCES Place (Longitude, Latitude)
+);
+CREATE TABLE DailyEventTracker
+(
+  dDate        date                                  NOT NULL,
+  UserID       INTEGER REFERENCES UserTable (UserID) NOT NULL,
+  DidFastOrNot BOOLEAN,
+  Fazr         BOOLEAN,
+  Juhr         BOOLEAN,
+  Asr          BOOLEAN,
+  Magrib       BOOLEAN,
+  Isha         BOOLEAN,
+  PRIMARY KEY (dDate, UserID)
+);
+CREATE TABLE Sura
+(
+  SuraID          INTEGER PRIMARY KEY,
+  Name            VARCHAR(100) NOT NULL,
+  Meaning_Of_Name VARCHAR(100) NOT NULL,
+  Juz_Number      INTEGER      NOT NULL,
+  Popular_Or_Not  BOOLEAN      NOT NULL,
+  Start_Ayah_ID   INTEGER      NOT NULL,
+  End_Ayah_ID     INTEGER      NOT NULL
+);
+CREATE TABLE Ayah
+(
+  AyahID         INTEGER PRIMARY KEY,
+  Arabic_Of_Ayah VARCHAR(1000)                    NOT NULL,
+  Pronunciation  VARCHAR(1000)                    NOT NULL,
+  SuraID         INTEGER REFERENCES Sura (SuraID) NOT NULL
+);
+CREATE TABLE HadithVerse
+(
+  HadithID         INTEGER PRIMARY KEY,
+  Source           VARCHAR(100)  NOT NULL,
+  Arabic_Of_Hadith VARCHAR(1000) NOT NULL,
+  Pronunciation    VARCHAR(1000) NOT NULL,
+  Translation      VARCHAR(1000) NOT NULL
+);
+CREATE TABLE Dua
+(
+  DuaID    INTEGER PRIMARY KEY,
+  Dua_Name VARCHAR(100) NOT NULL,
+  Category VARCHAR(100) NOT NULL
+);
+CREATE TABLE Dua_Ayah_Relation
+(
+  DuaID  INTEGER REFERENCES Dua (DuaID)   NOT NULL,
+  AyahID INTEGER REFERENCES Ayah (AyahID) NOT NULL
+);
+CREATE TABLE Dua_Hadith_Relation
+(
+  DuaID    INTEGER REFERENCES Dua (DuaID)            NOT NULL,
+  HadithID INTEGER REFERENCES HadithVerse (HadithID) NOT NULL
+);
+CREATE TABLE Translation
+(
+  LanguageID         VARCHAR(20)                      NOT NULL,
+  Name_Of_Translator VARCHAR(100)                     NOT NULL,
+  Translated_Text    VARCHAR(1000)                    NOT NULL,
+  AyahID             INTEGER REFERENCES Ayah (AyahID) NOT NULL,
+  PRIMARY KEY (LanguageID, Name_Of_Translator)
+);
+CREATE TABLE DailyNamajTime
+(
+  Name      VARCHAR(100) PRIMARY KEY,
+  StartTime time
+);
+CREATE TABLE Adhan
+(
+  AdhanID   INTEGER PRIMARY KEY,
+  Info      VARCHAR(100) NOT NULL,
+  AudioPath VARCHAR(200) NOT NULL
+);
+CREATE TABLE DailyNamajAdhanRelation
+(
+  Name    VARCHAR(100) NOT NULL,
+  AdhanID INTEGER      NOT NULL,
+  FOREIGN KEY (Name) REFERENCES DailyNamajTime (Name),
+  FOREIGN KEY (AdhanID) REFERENCES Adhan (AdhanID)
+);
+
+
+DROP TABLE NamesOfAllah;
+DROP TABLE WallPaper;
+DROP TABLE UserTable;
+DROP TABLE Place;
+DROP TABLE UserGoesToPlaces;
+DROP TABLE DailyEventTracker;
+DROP TABLE Sura;
+DROP TABLE Ayah;
+DROP TABLE HadithVerse;
+DROP TABLE Dua;
+DROP TABLE Dua_Ayah_Relation;
+DROP TABLE Dua_Hadith_Relation;
+DROP TABLE Translation;
+DROP TABLE DailyNamajTime;
+DROP TABLE Adhan;
+DROP TABLE DailyNamajAdhanRelation;

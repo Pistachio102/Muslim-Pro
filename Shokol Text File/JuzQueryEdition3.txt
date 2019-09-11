@@ -1,0 +1,12 @@
+(SELECT DISTINCT JuzID,Sura.Name,Ayah.SuraID,Ayah.AyahID,Ayah.AyahText,Ayah.Pronunciation,Translation.Translated_Text
+FROM Juz , Sura,Ayah,Translation
+WHERE Juz.JuzID=1 AND Juz.SuraID=Ayah.SuraID AND Juz.SuraID=Sura.SuraID AND Ayah.SuraID=Translation.SuraID AND Ayah.AyahID=Translation.AyahID AND Ayah.AyahID>=Juz.AyahID AND Translation.LanguageID='English' AND Translation.Name_Of_Translator='AhmedAli'
+ORDER BY Ayah.AyahID)
+UNION ALL
+(
+  SELECT DISTINCT JuzID,Sura.Name,Ayah.SuraID,Ayah.AyahID,Ayah.AyahText,Ayah.Pronunciation,Translation.Translated_Text
+FROM Juz , Sura,Ayah,Translation
+WHERE Juz.JuzID=1+1 AND Juz.SuraID=Ayah.SuraID AND Juz.SuraID=Sura.SuraID AND Ayah.SuraID=Translation.SuraID AND Ayah.AyahID=Translation.AyahID  AND Ayah.AyahID<Juz.AyahID AND Translation.LanguageID='English' AND Translation.Name_Of_Translator='AhmedAli'
+ORDER BY Ayah.AyahID
+
+);

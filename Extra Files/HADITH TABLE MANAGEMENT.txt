@@ -1,0 +1,59 @@
+------- 1 Drop your previous table ------ 
+
+
+DROP TABLE HadithVerse CASCADE ;
+
+
+-------- 2 Create this one -------
+
+
+CREATE TABLE HadithVerse
+(
+  HadithID         INTEGER PRIMARY KEY,
+  Source           VARCHAR  ,
+  Arabic_Of_Hadith VARCHAR ,
+  Translation      VARCHAR
+);
+
+
+-------- 3 Download and store it in your specific folder --------
+
+The csv file is given here 
+
+https://drive.google.com/file/d/1poHZNtXDbjNsg6c0OAZH3Zus1FvAd-gk/view?usp=sharing
+
+
+-------- 4 Copy the csv file --------
+
+COPY HadithVerse (hadithid, arabic_of_hadith, translation, Source) FROM 'F:\L 2 T 2\DATABASE TERM PROJECT\hadiths.csv' DELIMITER ',' CSV HEADER;
+
+
+--------- 5 Now run the procedure add_hadith_dua -------
+
+
+CREATE OR REPLACE PROCEDURE add_hadith_dua(dID INTEGER, dNAME VARCHAR(100), dCAT VARCHAR(100), hID INTEGER)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+  IF (hID IN (SELECT HadithID FROM HadithVerse)) THEN
+    INSERT INTO Dua
+      VALUES (dID, dNAME, dCAT);
+
+    INSERT INTO Dua_Hadith_Relation
+      VALUES (dID, hID);
+
+  ELSE RAISE NOTICE 'PLEASE CHECK HADITH ID';
+  END IF;
+    COMMIT;
+END;
+$$;
+
+
+-------- 6 Add some demo hadith duas ------------
+
+
+CALL add_hadith_dua(10, 'HadithDua1', 'Demo1', 1);
+CALL add_hadith_dua(11, 'HadithDua2', 'Demo2', 15);
+CALL add_hadith_dua(12, 'HadithDua3', 'Demo3', 100);
+
+

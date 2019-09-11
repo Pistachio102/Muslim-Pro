@@ -1,0 +1,36 @@
+---printing 99 Names of Allah ---
+
+SELECT NameID,Arabic,Pronunciation,Translation
+FROM NamesOfAllah;
+
+---Daily Namaj Tracker---
+
+SELECT dDate,Fazr,Juhr,Asr,Magrib,Isha
+FROM DailyEventTracker
+WHERE UserID=1;
+
+---Fast Tracker---
+
+SELECT dDate,DidFastOrNot
+FROM DailyEventTracker
+WHERE UserID=1;
+
+---Total Suras And Names---
+
+SELECT SuraID,Name,English_Name,Meaning
+FROM Sura;
+
+---Sura of Mecca/Medina---
+SELECT SuraID,Name,English_Name,Meaning
+FROM Sura
+WHERE Type='Meccan';
+
+---Popular Sura---
+UPDATE Sura
+SET Popular_Or_Not=TRUE
+WHERE English_Name IN ('An-Nisaa','Al-Baqara','Al-Kahf','Al-Ikhlaas','Al-Falaq','An-Naas');
+
+SELECT SuraID,Name,English_Name,Meaning
+FROM Sura
+WHERE Popular_Or_Not=TRUE;
+

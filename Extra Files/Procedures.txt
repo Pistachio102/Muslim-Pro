@@ -1,0 +1,49 @@
+
+--Procedures
+--\set ECHO on;
+
+CREATE OR REPLACE PROCEDURE add_ayah_dua(dID INTEGER, dNAME VARCHAR(100), dCAT VARCHAR(100), sID INTEGER, aID INTEGER)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+  IF (sID IN (SELECT SuraID FROM Ayah) AND aID IN (SELECT AyahID FROM Ayah)) THEN
+    INSERT INTO Dua
+      VALUES (dID, dNAME, dCAT);
+
+    INSERT INTO Dua_Ayah_Relation
+      VALUES (dID, sID, aID);
+
+  ELSE RAISE NOTICE 'PLEASE CHECK SURA ID AND AYAH ID';
+  END IF;
+    COMMIT;
+END;
+$$;
+
+
+CREATE OR REPLACE PROCEDURE add_hadith_dua(dID INTEGER, dNAME VARCHAR(100), dCAT VARCHAR(100), hID INTEGER)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+  IF (hID IN (SELECT HadithID FROM HadithVerse)) THEN
+    INSERT INTO Dua
+      VALUES (dID, dNAME, dCAT);
+
+    INSERT INTO Dua_Hadith_Relation
+      VALUES (dID, hID);
+
+  ELSE RAISE NOTICE 'PLEASE CHECK HADITH ID';
+  END IF;
+    COMMIT;
+END;
+$$;
+
+CALL add_ayah_dua(1, 'When Waking Up', 'Morning And Evening', 3, 191);-- THIS WORKED FINE
+CALL add_ayah_dua(2, 'When Waking Up', 'Morning And Evening', 3, 192);
+CALL add_ayah_dua(3, 'When Waking Up', 'Morning And Evening', 3, 193);
+CALL add_ayah_dua(4, 'Remembrance In The Morning And Evening', 'Morning And Evening', 112, 2);
+CALL add_ayah_dua(5, 'Remembrance In The Morning And Evening', 'Morning And Evening', 112, 3);
+CALL add_ayah_dua(6, 'Remembrance In The Morning And Evening', 'Morning And Evening', 112, 4);
+
+CALL add_ayah_dua(7, 'For Seeking Guidance', 'Praising Allah', 3, 160);
+CALL add_ayah_dua(2, 'ABC', 'C1', 1, 10); -- THIS GIVES EXCEPTION because sura 1 ayah 10 doesn't exist
+

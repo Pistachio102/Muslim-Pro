@@ -1,0 +1,23 @@
+----Search  for halal place/mosque----
+
+SELECT Place.Name
+FROM Place,UserTable,UserGoesToPlaces
+WHERE UserTable.UserID=UserGoesToPlaces.UserId AND UserGoesToPlaces.Longitude=Place.Longitude AND
+      UserGoesToPlaces.Latitude=Place.Latitude AND UserTable.UserID=1 AND Place.Type='Halal Place' AND
+      ((abs(UserTable.Latitude-Place.Latitude)<=1.5 OR abs(Place.Latitude-UserTable.Latitude)<=1.5) AND
+       (abs(UserTable.Longitude-Place.Longitude )<=1.5 OR abs(Place.Longitude-UserTable.Longitude )<=1.5));
+
+---Next time for prayer/Remaining Time---
+
+
+
+
+
+---printing juz---
+
+SELECT DISTINCT Juz.JuzID,Sura.Name,Ayah.SuraID,Ayah.AyahID,Ayah.AyahText
+FROM Juz,Sura,Ayah
+WHERE Juz.JuzID=4 AND Juz.SuraID=Ayah.SuraID AND Juz.SuraID=Sura.SuraID AND Ayah.AyahID>=Juz.AyahID
+ORDER BY Ayah.AyahID;
+
+

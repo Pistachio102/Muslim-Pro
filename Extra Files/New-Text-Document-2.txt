@@ -1,0 +1,110 @@
+<style>
+    body {
+        background-color: white;
+    }
+    label {
+        color: blue;
+        font-size: 25px;
+        text-align: center;
+        font-family: Consolas, sans-serif;
+    }
+    h1 {
+        color: blue;
+        text-align: center;
+        font-size: 40px;
+        font-family: Consolas, sans-serif;
+    }
+    h2 {
+        color: blue;
+        text-align: left;
+        font-size: 20px;
+        font-family: Consolas, sans-serif;
+    }
+    ul {
+        color: darkblue;
+        font-size: 25px;
+        font-family: Consolas, sans-serif;
+    }
+    input {
+        font-size: 15px;
+        font-family: Consolas,sans-serif;
+        {#word-wrap: break-spaces;#}
+        {#word-break: break-all;#}
+        width: 1500px;
+        wrap-option: hard;
+        white-space: pre-wrap;
+        height: 50px;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRICKET DATABASE</title>
+</head>
+<body>
+<h1>WELCOME TO CRICKET DATABASE</h1>
+<h1>SCHEMA</h1>
+<ul>Teams(TeamID, Name, League)</ul>
+<ul>Series(SeriesID, Series Name, MOTS, Winner)</ul>
+<ul>Match(MatchID, MatchType, Captain1, Captain2, Team1ID, Team2ID,score1,score2,score3,score4, Venue, Date,Winner,
+    MOTM, SeriesID,TotalRunsTeam1,TotalRunsTeam2)
+</ul>
+<ul>TeamsPlaysInSeries(TeamID, SeriesID)</ul>
+<ul>UmpiresConductsMatch(PlayerID, MatchID, UmpiringRole)</ul>
+<ul>Player (PlayerID, Nationality, DateOfBirth, First Name, Last Name,PlayerRole,BattingStyle, BowlingStyle)</ul>
+<ul>PlayerRanking(Rank, Match Format, Criteria, Points, PlayerID)</ul>
+<ul>TeamRanking(Rank, Match Format, Points, TeamID)</ul>
+<ul>Umpire(PlayerID, ODI umpired, Tests umpired, T20 umpired)</ul>
+<ul>Coach (PlayerId, First Name, Last Name, Coaching Role, TeamID)</ul>
+<ul>PlayerPlaysForTeam (PlayerID, TeamID)</ul>
+<ul>MatchPerformanceRELATION (match_id,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,
+    overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition )
+</ul>
+<ul>ByBallPerformanceRELATION(PlayerID, TeamId, MatchID, Over Number, Ball Number, Balling
+    Violation Type, Wicket Taking Fielder, Outed Batsman, Commentary, Second Batsman, Batsman, RunsScored, Wicket Type,
+    isFreeHit)
+</ul>
+<form method="POST" role="form" action="" onkeypress="return event.keyCode !== 13">
+
+{% csrf_token %}
+    <div class="tab-content">
+        <div class="tab-pane active" role="tabpanel" id="step1">
+            <div class="mobile-grids">
+                <div class="mobile-left text-center">
+                </div>
+                <div class="mobile-right">
+                    <h1>SIMPLE QUERIES</h1>
+                    <label>
+                         1.Get All Teams that play in a specific league:<br>
+                        <input type="text" name="sql_string" value="Select team_id, team_name FROM teams WHERE LOWER(league) like lower('international');">
+                    </label>
+                    <input type="submit" value="Run Query"/>
+                    <br>
+                    <label>
+                         2.Get Team rankings for a speciifc format<br>
+                        <input type="text" name="sql_string" value="select team_name, points from teams,team_ranking where teams.team_id = team_ranking.team_id and lower(match_format) like lower('t20') order by points;">
+                    </label>
+                    <input type="submit" value="Run Query"/>
+                    <br>
+                    <label>
+                         3.Get Player ranking for specific format and criteria<br>
+                        <input type="text" name="sql_string" value="select full_name, points from players,player_ranking where players.player_id = player_ranking.player_id and lower(match_format) like lower('test') and lower(criteria) like lower('batting') order by points;">
+                    </label>
+                    <input type="submit" value="Run Query"/>
+                    <br>
+                    <label>
+                         1.Get All Teams that play in a specific league:<br>
+                        <input type="text" name="sql_string" value="Select team_id, team_name FROM teams WHERE LOWER(league) like lower('international');">
+                    </label>
+                    <input type="submit" value="Run Query"/>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</form>
+</body>
+</html>

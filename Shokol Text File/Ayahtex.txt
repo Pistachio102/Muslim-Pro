@@ -1,0 +1,10 @@
+CREATE TABLE AyahTest
+(
+  Database NUMERIC NOT NULL ,
+  SuraID NUMERIC NOT NULL ,
+  VerseID NUMERIC NOT NULL ,
+  AyahText VARCHAR NOT NULL
+);
+
+--DROP TABLE AyahTest;
+COPY AyahTest(Database, SuraID, VerseID, AyahText)  FROM 'D:\Downloads1\Arabic-(Original-Book)-1(2).csv' DELIMITER ',' CSV HEADER ;

@@ -1,0 +1,63 @@
+<style>
+body {
+  background-color: yellowgreen;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  font-family: Consolas, sans-serif;
+}
+h2 {
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  font-family: Consolas, sans-serif;
+}
+ul {
+  color: black;
+  font-size: 25px;
+  font-family: Consolas, sans-serif;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MuslimPro</title>
+</head>
+<body>
+<h1>WELCOME TO MUSLIMPRO</h1>
+
+
+{% comment %}
+<h2>TRY Following urls</h2>
+<p>
+<ul>/player/player_id : to get stats of a player</ul>
+<ul>/scorecard/match_id : to get complete scorecard of a match</ul>
+<ul>/allplayers : to get list of all players</ul>
+<ul>/allmatches : to get list of all matches</ul>
+
+<h1>SCHEMA</h1>
+<ul>Teams(TeamID, Name, League)</ul>
+<ul>Series(SeriesID, Series Name, MOTS, Winner)</ul>
+<ul>Match(MatchID, MatchType, Captain1, Captain2, Team1ID, Team2ID,score1,score2,score3,score4, Venue, Date,Winner,
+MOTM, SeriesID,TotalRunsTeam1,TotalRunsTeam2)</ul>
+<ul>TeamsPlaysInSeries(TeamID, SeriesID)</ul>
+<ul>UmpiresConductsMatch(PlayerID, MatchID, UmpiringRole)</ul>
+<ul>Player (PlayerID, Nationality, DateOfBirth, First Name, Last Name,PlayerRole,BattingStyle, BowlingStyle)</ul>
+<ul>PlayerRanking(Rank, Match Format, Criteria, Points, PlayerID)</ul>
+<ul>TeamRanking(Rank, Match Format, Points, TeamID)</ul>
+<ul>Umpire(PlayerID, ODI umpired, Tests umpired, T20 umpired)</ul>
+<ul>Coach (PlayerId, First Name, Last Name, Coaching Role, TeamID)</ul>
+<ul>PlayerPlaysForTeam (PlayerID, TeamID)</ul>
+<ul>MatchPerformanceRELATION (match_id,team_id,player_id,runs_scored,balls_batted,fours_scored,sixes_scored,
+overs_bowled,maidens,runs_conceded,wickets_taken,no_balls,wides,final_out_condition )</ul>
+<ul>ByBallPerformanceRELATION(PlayerID, TeamId, MatchID, Over Number, Ball Number, Balling
+Violation Type, Wicket Taking Fielder, Outed Batsman, Commentary, Second Batsman, Batsman, RunsScored, Wicket Type, isFreeHit)</ul>
+{% endcomment %}
+
+</body>
+</html>
