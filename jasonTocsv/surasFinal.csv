@@ -1,0 +1,115 @@
+surah_id,arabic_name,english_name,meaning,type
+1,الفاتحة,Al-Faatiha,The Opening,Meccan
+2,البقرة,Al-Baqara,The Cow,Medinan
+3,آل عمران,Aal-i-Imraan,The Family of Imraan,Medinan
+4,النساء,An-Nisaa,The Women,Medinan
+5,المائدة,Al-Maaida,The Table,Medinan
+6,الأنعام,Al-An'aam,The Cattle,Meccan
+7,الأعراف,Al-A'raaf,The Heights,Meccan
+8,الأنفال,Al-Anfaal,The Spoils of War,Medinan
+9,التوبة,At-Tawba,The Repentance,Medinan
+10,يونس,Yunus,Jonas,Meccan
+11,هود,Hud,Hud,Meccan
+12,يوسف,Yusuf,Joseph,Meccan
+13,الرعد,Ar-Ra'd,The Thunder,Medinan
+14,ابراهيم,Ibrahim,Abraham,Meccan
+15,الحجر,Al-Hijr,The Rock,Meccan
+16,النحل,An-Nahl,The Bee,Meccan
+17,الإسراء,Al-Israa,The Night Journey,Meccan
+18,الكهف,Al-Kahf,The Cave,Meccan
+19,مريم,Maryam,Mary,Meccan
+20,طه,Taa-Haa,Taa-Haa,Meccan
+21,الأنبياء,Al-Anbiyaa,The Prophets,Meccan
+22,الحج,Al-Hajj,The Pilgrimage,Medinan
+23,المؤمنون,Al-Muminoon,The Believers,Meccan
+24,النور,An-Noor,The Light,Medinan
+25,الفرقان,Al-Furqaan,The Criterion,Meccan
+26,الشعراء,Ash-Shu'araa,The Poets,Meccan
+27,النمل,An-Naml,The Ant,Meccan
+28,القصص,Al-Qasas,The Stories,Meccan
+29,العنكبوت,Al-Ankaboot,The Spider,Meccan
+30,الروم,Ar-Room,The Romans,Meccan
+31,لقمان,Luqman,Luqman,Meccan
+32,السجدة,As-Sajda,The Prostration,Meccan
+33,الأحزاب,Al-Ahzaab,The Clans,Medinan
+34,سبإ,Saba,Sheba,Meccan
+35,فاطر,Faatir,The Originator,Meccan
+36,يس,Yaseen,Yaseen,Meccan
+37,الصافات,As-Saaffaat,Those drawn up in Ranks,Meccan
+38,ص,Saad,The letter Saad,Meccan
+39,الزمر,Az-Zumar,The Groups,Meccan
+40,غافر,Al-Ghaafir,The Forgiver,Meccan
+41,فصلت,Fussilat,Explained in detail,Meccan
+42,الشورى,Ash-Shura,Consultation,Meccan
+43,الزخرف,Az-Zukhruf,Ornaments of gold,Meccan
+44,الدخان,Ad-Dukhaan,The Smoke,Meccan
+45,الجاثية,Al-Jaathiya,Crouching,Meccan
+46,الأحقاف,Al-Ahqaf,The Dunes,Meccan
+47,محمد,Muhammad,Muhammad,Medinan
+48,الفتح,Al-Fath,The Victory,Medinan
+49,الحجرات,Al-Hujuraat,The Inner Apartments,Medinan
+50,ق,Qaaf,The letter Qaaf,Meccan
+51,الذاريات,Adh-Dhaariyat,The Winnowing Winds,Meccan
+52,الطور,At-Tur,The Mount,Meccan
+53,النجم,An-Najm,The Star,Meccan
+54,القمر,Al-Qamar,The Moon,Meccan
+55,الرحمن,Ar-Rahmaan,The Beneficent,Medinan
+56,الواقعة,Al-Waaqia,The Inevitable,Meccan
+57,الحديد,Al-Hadid,The Iron,Medinan
+58,المجادلة,Al-Mujaadila,The Pleading Woman,Medinan
+59,الحشر,Al-Hashr,The Exile,Medinan
+60,الممتحنة,Al-Mumtahana,She that is to be examined,Medinan
+61,الصف,As-Saff,The Ranks,Medinan
+62,الجمعة,Al-Jumu'a,Friday,Medinan
+63,المنافقون,Al-Munaafiqoon,The Hypocrites,Medinan
+64,التغابن,At-Taghaabun,Mutual Disillusion,Medinan
+65,الطلاق,At-Talaaq,Divorce,Medinan
+66,التحريم,At-Tahrim,The Prohibition,Medinan
+67,الملك,Al-Mulk,The Sovereignty,Meccan
+68,القلم,Al-Qalam,The Pen,Meccan
+69,الحاقة,Al-Haaqqa,The Reality,Meccan
+70,المعارج,Al-Ma'aarij,The Ascending Stairways,Meccan
+71,نوح,Nooh,Noah,Meccan
+72,الجن,Al-Jinn,The Jinn,Meccan
+73,المزمل,Al-Muzzammil,The Enshrouded One,Meccan
+74,المدثر,Al-Muddaththir,The Cloaked One,Meccan
+75,القيامة,Al-Qiyaama,The Resurrection,Meccan
+76,الانسان,Al-Insaan,Man,Medinan
+77,المرسلات,Al-Mursalaat,The Emissaries,Meccan
+78,النبإ,An-Naba,The Announcement,Meccan
+79,النازعات,An-Naazi'aat,Those who drag forth,Meccan
+80,عبس,Abasa,He frowned,Meccan
+81,التكوير,At-Takwir,The Overthrowing,Meccan
+82,الإنفطار,Al-Infitaar,The Cleaving,Meccan
+83,المطففين,Al-Mutaffifin,Defrauding,Meccan
+84,الإنشقاق,Al-Inshiqaaq,The Splitting Open,Meccan
+85,البروج,Al-Burooj,The Constellations,Meccan
+86,الطارق,At-Taariq,The Morning Star,Meccan
+87,الأعلى,Al-A'laa,The Most High,Meccan
+88,الغاشية,Al-Ghaashiya,The Overwhelming,Meccan
+89,الفجر,Al-Fajr,The Dawn,Meccan
+90,البلد,Al-Balad,The City,Meccan
+91,الشمس,Ash-Shams,The Sun,Meccan
+92,الليل,Al-Lail,The Night,Meccan
+93,الضحى,Ad-Dhuhaa,The Morning Hours,Meccan
+94,الشرح,Ash-Sharh,The Consolation,Meccan
+95,التين,At-Tin,The Fig,Meccan
+96,العلق,Al-Alaq,The Clot,Meccan
+97,القدر,Al-Qadr,"The Power, Fate",Meccan
+98,البينة,Al-Bayyina,The Evidence,Medinan
+99,الزلزلة,Az-Zalzala,The Earthquake,Medinan
+100,العاديات,Al-Aadiyaat,The Chargers,Meccan
+101,القارعة,Al-Qaari'a,The Calamity,Meccan
+102,التكاثر,At-Takaathur,Competition,Meccan
+103,العصر,Al-Asr,"The Declining Day, Epoch",Meccan
+104,الهمزة,Al-Humaza,The Traducer,Meccan
+105,الفيل,Al-Fil,The Elephant,Meccan
+106,قريش,Quraish,Quraysh,Meccan
+107,الماعون,Al-Maa'un,Almsgiving,Meccan
+108,الكوثر,Al-Kawthar,Abundance,Meccan
+109,الكافرون,Al-Kaafiroon,The Disbelievers,Meccan
+110,النصر,An-Nasr,Divine Support,Medinan
+111,المسد,Al-Masad,The Palm Fibre,Meccan
+112,الإخلاص,Al-Ikhlaas,Sincerity,Meccan
+113,الفلق,Al-Falaq,The Dawn,Meccan
+114,الناس,An-Naas,Mankind,Meccan
