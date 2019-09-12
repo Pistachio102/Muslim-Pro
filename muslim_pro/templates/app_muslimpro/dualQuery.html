@@ -1,0 +1,58 @@
+<style>
+body {
+  background-color: yellow;
+}
+
+h1 {
+  color: black;
+  text-align: left;
+  font-size: large;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+th {
+    color: navy;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 15px;
+    text-align: left;
+    border-style: solid;
+    border-color: white;
+}
+</style>
+
+<h1>Query Results</h1>
+{% if results %}
+    <table>
+    <tr>{% for item in results|slice:":1" %}
+        {% for k,v  in item.items%}
+            <th><h1>{{ k }}</h1></th>
+        {% endfor %}
+    {% endfor %}</tr>
+    {% for item in results %}
+        <tr>{% for k,v  in item.items    %}
+               <th>{{ v }}</th>
+        {% endfor %}</tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No results are available.</p>
+{% endif %}
+
+{% if results2 %}
+    <table>
+    <tr>{% for item in results2|slice:":1" %}
+        {% for k,v  in item.items%}
+            <th><h1>{{ k }}</h1></th>
+        {% endfor %}
+    {% endfor %}</tr>
+    {% for item in results2 %}
+        <tr>{% for k,v  in item.items    %}
+               <th>{{ v }}</th>
+        {% endfor %}</tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No results are available.</p>
+{% endif %}
+
+
